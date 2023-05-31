@@ -78,56 +78,59 @@
     <! -- Pills Toggle -->
     <nav>
       <div class="nav nav-pills my-4 justify-content-center" id="pillsTab" role="tablist">
-        <a class="nav-item nav-link active mr-1 text-muted" id="pills-grid-tab" data-toggle="pill" href="#pills-grid" role="presentation" aria-controls="pills-grid" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
-        <a class="nav-item nav-link text-muted" id="pills-solo-tab" data-toggle="pill" href="#pills-solo" role="presentation" aria-controls="pills-solo" aria-selected="true"><i class="fa-solid fa-square"></i></a>
+        <a class="nav-item nav-link active mr-1 text-muted bg-white" id="pills-grid-tab" data-toggle="pill" href="#pills-grid" role="presentation" aria-controls="pills-grid" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </a>
+        <a class="nav-item nav-link text-muted bg-white" id="pills-solo-tab" data-toggle="pill" href="#pills-solo" role="presentation" aria-controls="pills-solo" aria-selected="true">
+          <i class="fa-solid fa-square"></i>
+        </a>
       </div>
     </nav>
 
-    <! -- Switch Tab -->
+    <! -- Switch Content Tab -->
     <div class="tab-content" id="pills-tabContent">
   
-    <! -- Grid View -->
+    <! -- Grid Photo View -->
     <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab" tabindex="0">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="card-group">
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/287/300/300" class="card-img" alt="Random Photo">
+          <div class="card mb-3 rounded-0">
+            <img src="https://picsum.photos/id/287/300/300" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/213/300/300" class="card-img" alt="Random Photo">
+          <div class="card mb-3 rounded-0">
+            <img src="https://picsum.photos/id/213/300/300" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/137/300/300" class="card-img" alt="Random Photo">
+          <div class="card mb-3 rounded-0">
+            <img src="https://picsum.photos/id/137/300/300" class="img" alt="Random Photo">
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="card-group">
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/197/300/300" class="card-img" alt="Random Photo">
+          <div class="card my-3 rounded-0">
+            <img src="https://picsum.photos/id/197/300/300" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/243/300/300" class="card-img" alt="Random Photo">
+          <div class="card my-3 rounded-0">
+            <img src="https://picsum.photos/id/243/300/300" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
-          <div class="card my-2">
-            <img src="https://picsum.photos/id/133/300/300" class="card-img" alt="Random Photo">
+          <div class="card my-3 rounded-0">
+            <img src="https://picsum.photos/id/133/300/300" class="img" alt="Random Photo">
           </div>
         </div>
       </div>  
     </div>
 
-      <! -- Single Photo -->
+      <! -- Solo Photo View -->
     <div class="tab-pane fade" id="pills-solo" role="tabpanel" aria-labelledby="pills-solo-tab" tabindex="0">
-      <div class="container mx-auto">
-      <div class="card">
+      <div class="card mx-auto" style="width: auto;">
         <div class="card-body">
           <div class="row">
             <h5 class="col card-title">Peaceful Mountain</h5>
@@ -138,6 +141,24 @@
           <p class="card-text">This is an example of a photo feed in Instagram.</p>
         </div>
       </div>
+
+      <div class="card mx-auto my-5" style="width: 610px;">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Peaceful Mountain</h5>
+          <small class="card-title" style="font-weight: bold;">09/12</small>
+          <div class="card-img">
+            <img src="https://picsum.photos/id/287/600/600" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+          <small class="likes" style="font-size: 15px; font-weight: bold;">21114 Likes</small>
+          <p class="card-text">
+            Some quick example text for an example of a photo feed in Instagram.
+          </p>
+      
+      
+        </div>
       </div>
     </div>
 
