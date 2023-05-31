@@ -74,16 +74,20 @@
         </div>
       </div>
     </nav>
+
     <! -- Pills Toggle -->
     <nav>
       <div class="nav nav-pills my-4 justify-content-center" id="pillsTab" role="tablist">
-        <a class="nav-item nav-link active bg-white mr-1 text-muted" id="grid-tab" data-toggle="pills" href="#grid-view" role="presentation" aria-controls="grid-view" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
-        <a class="nav-item nav-link text-muted" id="grid-tab" data-toggle="pills" href="#grid-view" role="presentation" aria-controls="grid-view" aria-selected="true"><i class="fa-solid fa-square"></i></a>
+        <a class="nav-item nav-link active mr-1 text-muted" id="pills-grid-tab" data-toggle="pill" href="#pills-grid" role="presentation" aria-controls="pills-grid" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+        <a class="nav-item nav-link text-muted" id="pills-solo-tab" data-toggle="pill" href="#pills-solo" role="presentation" aria-controls="pills-solo" aria-selected="true"><i class="fa-solid fa-square"></i></a>
       </div>
     </nav>
-    <div class="tab-content" id="allContent">
+
+    <! -- Switch Tab -->
+    <div class="tab-content" id="pills-tabContent">
   
-      <! -- Grid View -->
+    <! -- Grid View -->
+    <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab" tabindex="0">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card my-2">
@@ -118,8 +122,10 @@
           </div>
         </div>
       </div>  
+    </div>
 
       <! -- Single Photo -->
+    <div class="tab-pane fade" id="pills-solo" role="tabpanel" aria-labelledby="pills-solo-tab" tabindex="0">
       <div class="container mx-auto">
       <div class="card">
         <div class="card-body">
@@ -133,9 +139,9 @@
         </div>
       </div>
       </div>
+    </div>
 
     
-    </div>
 
   </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
