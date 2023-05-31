@@ -10,55 +10,134 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 </head>
 <body>
+  <div class="container-fluid">
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <i class="fa-brands fa-instagram mr-1 text-dark"></i>
-            <span class="text-dark">Instagram</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav align-items-center">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  <span class="btn btn-success">
-                    Create a new post
-                  </span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                   <i class="fa-solid fa-gear"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Accesibility</a>
-                  <a class="dropdown-item" href="#">Privacy and Data</a>
-                  <a class="dropdown-item text-danger" href="#">Logout</a>
+      <div class="container">
+
+        <a class="navbar-brand" href="https://instagram.com">
+          <i class="fa-brands fa-instagram text-dark" style="font-size: 30px;"></i>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png" alt="Logo" width="100" height="100" class="d-inline-block img-fluid align-top" loading="lazy">
+        </a>
+
+        <div class="navbar-nav">
+
+          <! -- Create Post Button -->
+          <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#postmodal">Create a new post</button>
+
+          <! -- Modal -->
+          <div class="modal fade" id="postmodal" tabindex="-1" aria-labelledby="postmodalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="postmodalLabel" style="font-size: larger;">Create a new post</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </li>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-2">
+                      <label for="FormControlTextarea" class="form-label mb-1"><h3 style="font-size: medium;">Caption:</h3></label>
+                      <textarea class="form-control" id="FormControlTextarea" rows="2" placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                    <div class="row">
+                      <div class="col-1 mr-2">
+                        <label for="formFile" class="form-label btn btn-light" type="button"><i class="fa-solid fa-camera"></i></label>
+                        <input class="form-control" type="file" id="formFile" hidden="true">
+                      </div>
+                      <div class="col-1">
+                        <label for="formFile" class="form-label btn btn-light" type="button"><i class="fa-solid fa-location-pin"></i></label>
+                        <input class="form-control" type="file" id="formFile" hidden="true">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <! -- Dropdown -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
             </ul>
           </div>
         </div>
+      </div>
     </nav>
-    <div class="mx-auto d-flex" style="width: 200px;">
-        <div class="icons grid p-4">
-            <a href="#">
-                <i class="fa-solid fa-table-cells text-secondary"></i>
-            </a>
+    <! -- Pills Toggle -->
+    <nav>
+      <div class="nav nav-pills my-4 justify-content-center" id="pillsTab" role="tablist">
+        <a class="nav-item nav-link active bg-white mr-1 text-muted" id="grid-tab" data-toggle="pills" href="#grid-view" role="presentation" aria-controls="grid-view" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+        <a class="nav-item nav-link text-muted" id="grid-tab" data-toggle="pills" href="#grid-view" role="presentation" aria-controls="grid-view" aria-selected="true"><i class="fa-solid fa-square"></i></a>
+      </div>
+    </nav>
+    <div class="tab-content" id="allContent">
+  
+      <! -- Grid View -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/287/300/300" class="card-img" alt="Random Photo">
+          </div>
         </div>
-        <div class="icons picture p-4">
-            <a href="#">
-                <i class="fa-solid fa-square text-secondary"></i>
-            </a>
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/213/300/300" class="card-img" alt="Random Photo">
+          </div>
         </div>
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/137/300/300" class="card-img" alt="Random Photo">
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/197/300/300" class="card-img" alt="Random Photo">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/243/300/300" class="card-img" alt="Random Photo">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card my-2">
+            <img src="https://picsum.photos/id/133/300/300" class="card-img" alt="Random Photo">
+          </div>
+        </div>
+      </div>  
+
+      <! -- Single Photo -->
+      <div class="container mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <h5 class="col card-title">Peaceful Mountain</h5>
+            <small class="col text-body-secondary"><strong>09/12</strong></small>
+          </div>
+          <img src="https://picsum.photos/id/287/300/300" class="card-img-center" alt="Photo Feed">
+          <p class="card-text text-dark"><strong>204 Likes</strong></p>
+          <p class="card-text">This is an example of a photo feed in Instagram.</p>
+        </div>
+      </div>
+      </div>
+
+    
     </div>
 
-    </div>
+  </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
