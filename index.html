@@ -10,7 +10,7 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid px-0">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
 
@@ -95,34 +95,34 @@
       <div class="card-group">
         <div class="col">
           <div class="card mb-3 rounded-0">
-            <img src="https://picsum.photos/id/287/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/287/400/400" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
           <div class="card mb-3 rounded-0">
-            <img src="https://picsum.photos/id/213/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/213/400/400" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
           <div class="card mb-3 rounded-0">
-            <img src="https://picsum.photos/id/137/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/137/400/400" class="img" alt="Random Photo">
           </div>
         </div>
       </div>
       <div class="card-group">
         <div class="col">
           <div class="card my-3 rounded-0">
-            <img src="https://picsum.photos/id/197/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/197/400/400" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
           <div class="card my-3 rounded-0">
-            <img src="https://picsum.photos/id/243/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/243/400/400" class="img" alt="Random Photo">
           </div>
         </div>
         <div class="col">
           <div class="card my-3 rounded-0">
-            <img src="https://picsum.photos/id/133/300/300" class="img" alt="Random Photo">
+            <img src="https://picsum.photos/id/133/400/400" class="img" alt="Random Photo">
           </div>
         </div>
       </div>  
@@ -130,40 +130,48 @@
 
       <! -- Solo Photo View -->
     <div class="tab-pane fade" id="pills-solo" role="tabpanel" aria-labelledby="pills-solo-tab" tabindex="0">
-      <div class="card mx-auto" style="width: auto;">
-        <div class="card-body">
-          <div class="row">
-            <h5 class="col card-title">Peaceful Mountain</h5>
-            <small class="col text-body-secondary"><strong>09/12</strong></small>
-          </div>
-          <img src="https://picsum.photos/id/287/300/300" class="card-img-center" alt="Photo Feed">
-          <p class="card-text text-dark"><strong>204 Likes</strong></p>
-          <p class="card-text">This is an example of a photo feed in Instagram.</p>
+      <div class="container card mx-auto mb-3" style="width: 600px;">
+        <div class="row card-body p-0">
+          <h5 class="col card-title d-inline pl-3 pt-2">Peaceful Mountain</h5>
+          <small class="col pr-3 pt-2" style="text-align: end; font-weight: bold;">09/12</small>
+          <img src="https://picsum.photos/id/287/600/600" class="img-fluid" />
         </div>
-      </div>
-
-      <div class="card mx-auto my-5" style="width: 610px;">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Peaceful Mountain</h5>
-          <small class="card-title" style="font-weight: bold;">09/12</small>
-          <div class="card-img">
-            <img src="https://picsum.photos/id/287/600/600" class="img-fluid" />
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-            </a>
-          </div>
-          <small class="likes" style="font-size: 15px; font-weight: bold;">21114 Likes</small>
+        <div class="card-footer bg-transparent px-0 pt-2 pb-3">
+          <span class="likes" style="font-size: 15px; font-weight: bold;">21114 Likes</span>
           <p class="card-text">
             Some quick example text for an example of a photo feed in Instagram.
           </p>
-      
-      
         </div>
       </div>
+      <div class="container card mx-auto mb-3" style="width: 600px;">
+        <div class="row card-body p-0">
+          <h5 class="col card-title d-inline pl-3 pt-2">Ocean Breeze</h5>
+          <small class="col pr-3 pt-2" style="text-align: end; font-weight: bold;">07/17</small>
+          <img src="https://picsum.photos/id/213/600/600" class="img-fluid" />
+        </div>
+        <div class="card-footer bg-transparent px-0 pt-2 pb-3">
+          <span class="likes" style="font-size: 15px; font-weight: bold;">3154 Likes</span>
+          <p class="card-text">
+            Some quick example text for an example of a photo feed in Instagram.
+          </p>
+        </div>
+      </div>
+      <div class="container card mx-auto mb-3" style="width: 600px;">
+        <div class="row card-body p-0">
+          <h5 class="col card-title d-inline pl-3 pt-2">More Mountains!!!</h5>
+          <small class="col pr-3 pt-2" style="text-align: end; font-weight: bold;">03/13</small>
+          <img src="https://picsum.photos/id/243/600/600" class="img-fluid" />
+        </div>
+        <div class="card-footer bg-transparent px-0 pt-2 pb-3">
+          <span class="likes" style="font-size: 15px; font-weight: bold;">3154 Likes</span>
+          <p class="card-text">
+            Some quick example text for an example of a photo feed in Instagram.
+          </p>
+        </div>
+      </div>
+
     </div>
-
-    
-
+  
   </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
